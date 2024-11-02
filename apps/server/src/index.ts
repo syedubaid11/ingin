@@ -11,7 +11,7 @@ app.get('/', (req: express.Request, res: express.Response): void => {
     res.send("Socket IO is running now ");
 })
 
-io.on('conncetion',(socket)=>{
+io.on('connection',(socket)=>{
     console.log('a user connceted');
 
     socket.on('disconnect',()=>{
