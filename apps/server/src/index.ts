@@ -4,7 +4,13 @@ import express from "express";
 
 const app=express();
 const server=http.createServer(app);
-const io=new Server(server);
+const io=new Server(server,{
+    cors:{
+        origin:"http://localhost:3000",//the web page url
+        methods: ["GET", "POST"],
+        credentials: true 
+    }
+});
 
 
 app.get('/', (req: express.Request, res: express.Response): void => {

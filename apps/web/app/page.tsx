@@ -4,9 +4,6 @@ import { io } from "socket.io-client";
 
 const server_url='http://localhost:3004';
 
-
-
-
 export default function App(){
   const [connected,isConnected]=useState(false);
 
